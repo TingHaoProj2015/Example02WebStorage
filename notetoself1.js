@@ -78,7 +78,7 @@ var deleteSticky = function(e){
 	if (stickiesArry){
 		for(var i=0;i<stickiesArry.length;i++){
 			if (key==stickiesArry[i]){
-				stickiesArry.splice(i,1); // query splice
+				stickiesArry.splice(i,1); // .splice(position, number of items)
 			}
 		}
 	}
@@ -92,4 +92,5 @@ var deleteSticky = function(e){
 var removeStickyFromDom = function(key){
  	var item = document.getElementById(key);
  	item.parentNode.removeChild(item);
+ 	//item.remove(); 點選<span></span>無法work
 };
